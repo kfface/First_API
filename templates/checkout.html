@@ -32,79 +32,72 @@
     <!-- Custom styles for this template -->
     <link href="form-validation.css" rel="stylesheet">
   </head>
-  <body class="bg-light">
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#"><img src="static/logo-generic.png" alt="generic company logo" width="150" height="150" style="float:left; margin-left: 200px;"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-		  <span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNavDropdown">
-		  <ul class="navbar-nav">
+  <body class="bg-light" style="background-color: rgb(248, 248, 248);">
+	  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #fff; height: 80px;">
+	  	<a class="navbar-brand" href="#"><img src="static/logo-generic.png" alt="generic company logo" width="150" height="150" style="float:left; margin-left: 200px;"></a>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	  	  <span class="navbar-toggler-icon"></span>
+	  	</button>
+	  	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+	  	  <ul class="navbar-nav">
 
-			<li class="nav-item dropdown">
-			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Services
-			  </a>
-			  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				<a class="dropdown-item" href="#">Services</a>
-				<a class="dropdown-item" href="#">Products</a>
-				<a class="dropdown-item" href="#">Other things U NEED</a>
-			  </div>
-			</li>
-		  </ul>
-		</div>
-	  </nav>
-    <div class="container">
-  <div class="py-5 text-center">
-    <h1>Global Address US Complete - US</h1>
-	<div class="box" style="background-color: grey;height: 80px;width:1200px; padding: 0px; margin-right: 100px;">
-		<p style="color:white; font-size: 60px;text-align: center;">Checkout</p>
+	  		<li class="nav-item dropdown">
+	  		  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	  			Services
+	  		  </a>
+	  		  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	  			<a class="dropdown-item" href="#">Services</a>
+	  			<a class="dropdown-item" href="#">Products</a>
+	  			<a class="dropdown-item" href="#">Other things U NEED</a>
+	  		  </div>
+	  		</li>
+	  	  </ul>
+	  	</div>
+	    </nav>
+  <div class="container2">
+    <div class="title">
+      <p style="font-size: 40px;">Global Address US Complete - US</p>
+    </div>
 
-  <div class="row">
+	  <div class="box">
+	  	<p style="color:#ffffff; font-size: 30px;text-align: center; vertical-align: middle;">Checkout</p>
+    </div>  
+  </div>
+  <div class="container">
+
+  <div class="row" style="margin-top: 40px;">
     <div class="col-md-4 order-md-2 mb-4">
       <h4 class="d-flex justify-content-between align-items-center mb-3">
-        <span class="text-muted">Order SUmmary</span>
-        <span class="badge badge-secondary badge-pill">3</span>
+        <span class="text-muted">Order Summary</span>
       </h4>
-      <ul class="list-group mb-3">
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-            <h6 class="my-0">Items:</h6>
-            <small class="text-muted">Brief description</small>
-          </div>
-          <span class="text-muted">$112.49</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-            <h6 class="my-0">Shiping & handling:</h6>
-          </div>
-          <span class="text-muted">$5.99</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-            <h6 class="my-0">Total before tax:</h6>
-            <small class="text-muted">Brief description</small>
-          </div>
-          <span class="text-muted">$118.48</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between bg-light">
-          <div class="text-success">
-            <h6 class="my-0">Estimated tax to be collected:*</h6>
-          </div>
-          <span class="text-success">$8.95</span>
-        </li>
-      </ul>
-      <hr>
-      <form class="mb-3">
-        <div class="input-group">
-          <h4><b>Order total: $127.43</b></h4>
-        <div class="input-group-append">
-          <button type="submit" class="btn btn-secondary">Place Order</button>
-        </div>
-        </div>
-      </form>
-      <hr>
+      <div id="left-column">
+        <h6>Items:</h6>
+        <h6>Shipping & handling:</h6>
+        <hr class="invisible">
+          <h6>Total before tax:</h6>
+          <h6>Estimated tax to be collected:*</h6>
+          <hr>
+      </div>
+      <div id="right-column">
+        <h6>$112.49</h6>
+        <h6>$5.99</h6>
+        <hr>
+        <h6>$118.48</h6>
+        <h6>$8.95</h6>
+        <hr>
+      </div>
+    <div class="mb-3">
+    <form class="mb-3">
+      <div class="input-group">
+        <h4><b>Order total: $127.43</b></h4>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-secondary" style="margin-left: 200px;">Place Order</button>
+      </div>
+    </div>
+    </form>
 	  <div class="mb-3">
+      <hr>
 		<label for="address">Shipping Address</label>
 		<input type="text" class="form-control" id="street" placeholder="Street:" required>
     <input type="text" class="form-control" id="city" placeholder="City:" required>
@@ -118,7 +111,7 @@
     </div>
     <div class="col-md-8 order-md-1">
       <h4 class="mb-3">Items</h4>
-      <hr>
+      <hr class="mb-4">
               <h6><b>Stiletto TI14MS</b> - 14 oz. Titanium Framing Hammer</h6>
              <h6><b>Occidental Leather 5080DB</b> - Pro Framer Set with Double Outer Bag + Industrial Oxidized Cock Ring</h6>
               <h6><b>Rockwell RK9034</b> - JawStand XP Work Support Stand</h6>
