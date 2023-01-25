@@ -99,10 +99,10 @@
 	  <div class="mb-3">
       <hr>
 		<label for="address">Shipping Address</label>
-		<input type="text" class="form-control" id="street" placeholder="Street:" required>
-    <input type="text" class="form-control" id="city" placeholder="City:" required>
-		<input type="text" class="form-control" id="state" placeholder="State:" required>
-		<input type="text" class="form-control" id="postal code" placeholder="Postal Code:" required>
+		<p class="form-control" id="street_address">street address</p>
+    <p class="form-control" id="city">city</p>
+		<p class="form-control" id="state">state</p>
+		<p class="form-control" id="postcode">postal code</p>
 
 
 	  </div>
@@ -142,22 +142,20 @@
           
         </div>
 
-        <div class="custom-control custom-checkbox">
+        <div >
           <h6>Choose delivery method</h6>
-          <input type="checkbox" class="custom-control-input" id="fedex">
-          <label class="custom-control-label" for="same-address">Fedex Priority Overnight - $136.99</label>
+          <input type="radio" id="fedex">
+          <label>Fedex Priority Overnight - $136.99</label>
         </div>
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="fedex2">
-          <label class="custom-control-label" for="save-info">Fedex Ground - $58.99</label>
+        <div>
+          <input type="radio"  id="fedex2">
+          <label>Fedex Ground - $58.99</label>
         </div>
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="gls">
-          <label class="custom-control-label" for="save-info">GLS we save you money by taking advantage of our employees! - $0.99</label>
+        <div>
+          <input type="radio" id="gls">
+          <label>GLS we save you money by taking advantage of our employees! - $0.99</label>
         </div>
         <hr class="mb-4">
-
-
     </div>
   </div>
 
@@ -174,5 +172,6 @@
       <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
         <script src="https://getbootstrap.com/docs/4.3/examples/checkout/form-validation.js"></script>
         <script type = "text/javascript" src="/static/autocomplete.js"></script>
+
 </body>
 </html>

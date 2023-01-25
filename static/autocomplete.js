@@ -219,6 +219,11 @@ function addressAutocomplete(containerElement, callback, options) {
 addressAutocomplete(document.getElementById("autocomplete-container"), (data) => {
   console.log("Selected option: ");
   console.log(data);
+  document.getElementById("street_address").innerHTML = data.address_line1
+  document.getElementById("city").innerHTML = data.city
+  document.getElementById("state").innerHTML = data.state
+  document.getElementById("postcode").innerHTML = data.postcode
+
 }, {
   placeholder: "Enter your address here"
 });
