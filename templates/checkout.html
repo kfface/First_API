@@ -92,7 +92,7 @@
         <h4><b>Order total: $127.43</b></h4>
       </div>
       <div>
-        <button type="submit" class="btn btn-secondary" style="margin-left: 200px;">Place Order</button>
+        <button type="submit" class="btn btn-secondary" style="margin-left: 200px;" disabled>Place Order</button>
       </div>
     </div>
     </form>
@@ -118,17 +118,17 @@
         
   
 
-        <div class="mb-3">
+        <div class="mb-3" id = "name_form">
           <h6><b>Name</b></h6>
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <input type="text" class="form-control" id="firstName" placeholder="" value="Aki" required>
+                  <p class="form-control">Aki</p>
                   <div class="invalid-feedback">
                     Valid first name is required.
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <input type="text" class="form-control" id="lastName" placeholder="" value="Stankoski" required>
+                  <p class="form-control">Stankoski</p>
                   <div class="invalid-feedback">
                     Valid last name is required.
                   </div>
@@ -137,14 +137,15 @@
         </div>
 
 
-        <h6><b>Address</b></h6>
-        <div class="mb-3" id="autocomplete-container">
-          
+
+        <div class="mb-9" id="autocomplete-container">
+          <h6><b>Address</b></h6>
+
         </div>
 
         <div >
           <h6>Choose delivery method</h6>
-          <input type="radio" id="fedex">
+          <input type="radio" id="fedex" checked="checked">
           <label>Fedex Priority Overnight - $136.99</label>
         </div>
         <div>

@@ -5,13 +5,13 @@ function addressAutocomplete(containerElement, callback, options) {
   
     // create container for input element
     const inputContainerElement = document.createElement("div");
-    inputContainerElement.setAttribute("class", "mb-3");
+    inputContainerElement.setAttribute("class", "mb-9");
     containerElement.appendChild(inputContainerElement);
   
     // create input element
     const inputElement = document.createElement("input");
     inputElement.setAttribute("type", "text");
-    inputElement.setAttribute("class", "form-control");
+    inputElement.setAttribute("class", "form-control2");
     inputElement.setAttribute("placeholder", options.placeholder);
     inputContainerElement.appendChild(inputElement);
   
