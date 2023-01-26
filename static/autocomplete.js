@@ -82,7 +82,7 @@ function addressAutocomplete(containerElement, callback, options) {
           // this is my api key kolbe
           const apiKey = "4ef820adfff447a3b3a3c64c611b0a0c";
   
-          var url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(currentValue)}&format=json&limit=5&apiKey=${apiKey}`;
+          var url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(currentValue)}&format=json&filter=countrycode:us&limit=5&apiKey=${apiKey}`;
   
           fetch(url)
             .then(response => {
@@ -216,13 +216,14 @@ function addressAutocomplete(containerElement, callback, options) {
     });
 }
   
-addressAutocomplete(document.getElementById("autocomplete-container"), (data) => {
+addressAutocomplete(document.getElementById("autocomplete-container", "bias=countrycode:us"), (data) => {
   console.log("Selected option: ");
   console.log(data);
   document.getElementById("street_address").innerHTML = data.address_line1
   document.getElementById("city").innerHTML = data.city
   document.getElementById("state").innerHTML = data.state
   document.getElementById("postcode").innerHTML = data.postcode
+  document.getElementById('submit_button').removeAttribute('disabled')
 
 }, {
   placeholder: "Enter your address here"

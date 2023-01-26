@@ -92,17 +92,17 @@
         <h4><b>Order total: $127.43</b></h4>
       </div>
       <div>
-        <button type="submit" class="btn btn-secondary" style="margin-left: 200px;" disabled>Place Order</button>
+        <button type="submit" class="btn btn-secondary" id="submit_button" style="margin-left: 200px;" disabled>Place Order</button>
       </div>
     </div>
     </form>
-	  <div class="mb-3">
+	  <div class="mb-3" id="form_confirm">
       <hr>
-		<label for="address">Shipping Address</label>
-		<p class="form-control" id="street_address">street address</p>
-    <p class="form-control" id="city">city</p>
-		<p class="form-control" id="state">state</p>
-		<p class="form-control" id="postcode">postal code</p>
+		  <label for="address">Shipping Address</label>
+		  <p class="form-control" id="street_address">street address</p>
+      <p class="form-control" id="city">city</p>
+		  <p class="form-control" id="state">state</p>
+		  <p class="form-control" id="postcode">postal code</p>
 
 
 	  </div>
@@ -122,13 +122,13 @@
           <h6><b>Name</b></h6>
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <p class="form-control">Aki</p>
+                  <p class="form-control">Kolbe</p>
                   <div class="invalid-feedback">
                     Valid first name is required.
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <p class="form-control">Stankoski</p>
+                  <p class="form-control">Face</p>
                   <div class="invalid-feedback">
                     Valid last name is required.
                   </div>
@@ -173,6 +173,5 @@
       <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
         <script src="https://getbootstrap.com/docs/4.3/examples/checkout/form-validation.js"></script>
         <script type = "text/javascript" src="/static/autocomplete.js"></script>
-
 </body>
 </html>
