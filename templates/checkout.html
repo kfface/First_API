@@ -10,28 +10,8 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/checkout/">
 	<link rel="stylesheet" href="/static/style.css">
-    <!-- Bootstrap core CSS -->
-<link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="form-validation.css" rel="stylesheet">
-  </head>
+    </head>
   <body class="bg-light" style="background-color: rgb(248, 248, 248);">
 	  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #fff; height: 80px;">
 	  	<a class="navbar-brand" href="#"><img src="static/logo-generic.png" alt="generic company logo" width="150" height="150" style="float:left; margin-left: 200px;"></a>
@@ -95,38 +75,20 @@
         <form method="POST">
           <button type="submit" class="btn btn-secondary" id="submit_button" style="margin-left: 200px;" >Place Order</button>
         
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" id="open-modal-btn" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
+        <!-- Button trigger modal -->
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn">Open Modal</button>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-      </div>
-        <div class="modal-body">
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
         
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-      <div class='modal-body' id="map"></div>
-      <div id="popupdarkbg"></div>
-      
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" id="close-modal-btn" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-          
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+          </div>
+        
+        </div>  
       </div>
     </div>
 	  <div class="mb-3" id="form_confirm">
@@ -202,10 +164,6 @@
     </ul>
   </footer>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-        <script src="https://getbootstrap.com/docs/4.3/examples/checkout/form-validation.js"></script>
-        <script type = "text/javascript" src="/static/autocomplete.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9LcGrN1dcRUdkvtzS1NcnMNSvSRtmjy0"></script>
+<script type = "text/javascript" src="/static/autocomplete.js"></script>
 </body>
 </html>
