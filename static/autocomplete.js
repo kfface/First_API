@@ -215,7 +215,9 @@ function addressAutocomplete(containerElement, callback, options) {
       }
     });
 }
-  
+
+
+
 addressAutocomplete(document.getElementById("autocomplete-container", "bias=countrycode:us"), (data) => {
   console.log("Selected option: ");
   console.log(data);
@@ -224,7 +226,113 @@ addressAutocomplete(document.getElementById("autocomplete-container", "bias=coun
   document.getElementById("state").innerHTML = data.state
   document.getElementById("postcode").innerHTML = data.postcode
   document.getElementById('submit_button').removeAttribute('disabled')
+  addressForSearch = data.address_line1 + ", " + data.address_line2
+  console.log(addressForSearch)
 
+  
 }, {
-  placeholder: "Enter your address here"
+  placeholder: "Enter your US address here"
 });
+
+$('#exampleModal').on('shown.bs.modal', (function() {
+  var mapIsAdded = false;
+
+  return function() {
+    if (!mapIsAdded) {
+      $('.modal-body').html('<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9808.974038062652!2d4.3244048859985185!3d52.07529689519739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1snl!2snl!4v1419588821379" width="100%" height="400" frameborder="0" style="border:0"></iframe>');
+
+      mapIsAdded = true;
+    }    
+  };
+})());
+
+
+//map geocoding API?
+
+let map;
+let marker;
+let geocoder;
+let responseDiv;
+let response;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 8,
+    center: { lat: -34.397, lng: 150.644 },
+    mapTypeControl: false,
+  });
+  geocoder = new google.maps.Geocoder();
+
+  const inputText = document.createElement("input");
+
+  inputText.type = "text";
+  inputText.placeholder = "Enter a location";
+
+  const submitButton = document.createElement("input");
+
+  submitButton.type = "button";
+  submitButton.value = "Geocode";
+  submitButton.classList.add("button", "button-primary");
+
+  const clearButton = document.createElement("input");
+
+  clearButton.type = "button";
+  clearButton.value = "Clear";
+  clearButton.classList.add("button", "button-secondary");
+  response = document.createElement("pre");
+  response.id = "response";
+  response.innerText = "";
+  responseDiv = document.createElement("div");
+  responseDiv.id = "response-container";
+  responseDiv.appendChild(response);
+
+  const instructionsElement = document.createElement("p");
+
+  instructionsElement.id = "instructions";
+  instructionsElement.innerHTML =
+    "<strong>Instructions</strong>: Enter an address in the textbox to geocode or click on the map to reverse geocode.";
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(inputText);
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(submitButton);
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(clearButton);
+  map.controls[google.maps.ControlPosition.LEFT_TOP].push(instructionsElement);
+  map.controls[google.maps.ControlPosition.LEFT_TOP].push(responseDiv);
+  marker = new google.maps.Marker({
+    map,
+  });
+  map.addListener("click", (e) => {
+    geocode({ location: e.latLng });
+  });
+  submitButton.addEventListener("click", () =>
+    geocode({ address: inputText.value })
+  );
+  clearButton.addEventListener("click", () => {
+    clear();
+  });
+  clear();
+}
+
+function clear() {
+  marker.setMap(null);
+  responseDiv.style.display = "none";
+}
+
+function geocode(request) {
+  clear();
+  geocoder
+    .geocode(request)
+    .then((result) => {
+      const { results } = result;
+
+      map.setCenter(results[0].geometry.location);
+      marker.setPosition(results[0].geometry.location);
+      marker.setMap(map);
+      responseDiv.style.display = "block";
+      response.innerText = JSON.stringify(result, null, 2);
+      return results;
+    })
+    .catch((e) => {
+      alert("Geocode was not successful for the following reason: " + e);
+    });
+}
+
+window.initMap = initMap;

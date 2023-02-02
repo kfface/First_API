@@ -92,10 +92,43 @@
         <h4><b>Order total: $127.43</b></h4>
       </div>
       <div>
-        <button type="submit" class="btn btn-secondary" id="submit_button" style="margin-left: 200px;" disabled>Place Order</button>
+        <form method="POST">
+          <button type="submit" class="btn btn-secondary" id="submit_button" style="margin-left: 200px;" >Place Order</button>
+        
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" id="open-modal-btn" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+      </div>
+        <div class="modal-body">
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class='modal-body' id="map"></div>
+      <div id="popupdarkbg"></div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="close-modal-btn" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
-    </form>
+  </div>
+</div>
+
+
+          
+      </div>
+    </div>
 	  <div class="mb-3" id="form_confirm">
       <hr>
 		  <label for="address">Shipping Address</label>
@@ -104,7 +137,7 @@
 		  <p class="form-control" id="state">state</p>
 		  <p class="form-control" id="postcode">postal code</p>
 
-
+    </form>
 	  </div>
 
 
@@ -173,5 +206,6 @@
       <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
         <script src="https://getbootstrap.com/docs/4.3/examples/checkout/form-validation.js"></script>
         <script type = "text/javascript" src="/static/autocomplete.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9LcGrN1dcRUdkvtzS1NcnMNSvSRtmjy0"></script>
 </body>
 </html>
