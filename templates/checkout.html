@@ -7,9 +7,9 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
     <title>Checkout example · Bootstrap</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/checkout/">
-	<link rel="stylesheet" href="/static/style.css">
+	  <link rel="stylesheet" href="/static/style.css">
+
   </head>
   <body class="bg-light" style="background-color: rgb(248, 248, 248);">
 	  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #fff; height: 80px;">
@@ -19,169 +19,148 @@
 	  	</button>
 	  	<div class="collapse navbar-collapse" id="navbarNavDropdown">
 	  	  <ul class="navbar-nav">
-
-	  		<li class="nav-item dropdown">
-	  		  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	  			Services
-	  		  </a>
-	  		  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	  			<a class="dropdown-item" href="#">Services</a>
-	  			<a class="dropdown-item" href="#">Products</a>
-	  			<a class="dropdown-item" href="#">Other things U NEED</a>
-	  		  </div>
-	  		</li>
+	  		  <li class="nav-item dropdown">
+	  		    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	  			  Services
+	  		    </a>
+	  		    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	  			    <a class="dropdown-item" href="#">Services</a>
+	  			    <a class="dropdown-item" href="#">Products</a>
+	  			    <a class="dropdown-item" href="#">Other things U NEED</a>
+	  		    </div>
+	  		  </li>
 	  	  </ul>
 	  	</div>
-	    </nav>
-  <div class="container2">
-    <div class="title">
-      <p style="font-size: 40px;">Global Address US Complete - US</p>
+	  </nav>
+    <div class="container2">
+      <div class="title">
+        <p style="font-size: 40px;">Global Address US Complete - US</p>
+      </div>
+	    <div class="box">
+	    	<p style="color:#ffffff; font-size: 30px;text-align: center; vertical-align: middle;">Checkout</p>
+      </div>  
     </div>
 
-	  <div class="box">
-	  	<p style="color:#ffffff; font-size: 30px;text-align: center; vertical-align: middle;">Checkout</p>
-    </div>  
-  </div>
-  <div class="container">
+    <div class="container">
+      <div class="row" style="margin-top: 40px;">
+        <div class="col-md-4 order-md-2 mb-4">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">Order Summary</span>
+          </h4>
+          <div id="left-column">
+            <h6>Items:</h6>
+            <h6>Shipping & handling:</h6>
+            <hr class="invisible">
+            <h6>Total before tax:</h6>
+            <h6>Estimated tax to be collected:*</h6>
+            <hr>
+          </div>
+          <div id="right-column">
+            <h6>$112.49</h6>
+            <h6>$5.99</h6>
+            <hr>
+            <h6>$118.48</h6>
+            <h6>$8.95</h6>
+            <hr>
+          </div>
+          <div class="mb-3">
+            <form class="mb-3">
+            <div class="input-group">
+              <h4><b>Order total: $127.43</b></h4>
+            </div>
+            <div>
+              <form method="POST">
+                <button type="submit" class="btn btn-secondary" id="submit_button" style="margin-left: 200px;" >Place Order</button>
+              
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" id="open-modal-btn" data-toggle="modal" data-target="#exampleModal">
+                Launch demo modal
+              </button>
 
-  <div class="row" style="margin-top: 40px;">
-    <div class="col-md-4 order-md-2 mb-4">
-      <h4 class="d-flex justify-content-between align-items-center mb-3">
-        <span class="text-muted">Order Summary</span>
-      </h4>
-      <div id="left-column">
-        <h6>Items:</h6>
-        <h6>Shipping & handling:</h6>
-        <hr class="invisible">
-          <h6>Total before tax:</h6>
-          <h6>Estimated tax to be collected:*</h6>
-          <hr>
-      </div>
-      <div id="right-column">
-        <h6>$112.49</h6>
-        <h6>$5.99</h6>
-        <hr>
-        <h6>$118.48</h6>
-        <h6>$8.95</h6>
-        <hr>
-      </div>
-    <div class="mb-3">
-    <form class="mb-3">
-      <div class="input-group">
-        <h4><b>Order total: $127.43</b></h4>
-      </div>
-      <div>
-        <form method="POST">
-          <button type="submit" class="btn btn-secondary" id="submit_button" style="margin-left: 200px;" >Place Order</button>
-        
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" id="open-modal-btn" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-      </div>
-        <div class="modal-body" id="map">
-        
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-      <div id="popupdarkbg"></div>
-      
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" id="close-modal-btn" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-          
-      </div>
-    </div>
-	  <div class="mb-3" id="form_confirm">
-      <hr>
-		  <label for="address">Shipping Address</label>
-		  <p class="form-control" id="street_address">street address</p>
-      <p class="form-control" id="city">city</p>
-		  <p class="form-control" id="state">state</p>
-		  <p class="form-control" id="postcode">postal code</p>
-
-    </form>
-	  </div>
-
-
-    </div>
-    <div class="col-md-8 order-md-1">
-      <h4 class="mb-3">Items</h4>
-      <hr class="mb-4">
-              <h6><b>Stiletto TI14MS</b> - 14 oz. Titanium Framing Hammer</h6>
-             <h6><b>Occidental Leather 5080DB</b> - Pro Framer Set with Double Outer Bag</h6>
-              <h6><b>Rockwell RK9034</b> - JawStand XP Work Support Stand</h6>
-        
-  
-
-        <div class="mb-3" id = "name_form">
-          <h6><b>Name</b></h6>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <p class="form-control">Kolbe</p>
-                  <div class="invalid-feedback">
-                    Valid first name is required.
-                  </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <p class="form-control">Face</p>
-                  <div class="invalid-feedback">
-                    Valid last name is required.
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    </div>
+                    <div class="modal-body" id="map">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div id="popupdarkbg"></div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" id="close-modal-btn" data-dismiss="modal">Close</button>
+                    </div>
                   </div>
                 </div>
               </div>
-        </div>
+            </div>
+          </div>
+	        <div class="mb-3" id="form_confirm">
+            <hr>
+	  	      <label for="address">Shipping Address</label>
+	  	      <p class="form-control" id="street_address">street address</p>
+            <p class="form-control" id="city">city</p>
+	  	      <p class="form-control" id="state">state</p>
+	  	      <p class="form-control" id="postcode">postal code</p>
+
+            </form>
+	        </div>
 
 
+        </div>
+        <div class="col-md-8 order-md-1">
+          <h4 class="mb-3">Items</h4>
+          <hr class="mb-4">
+          <h6><b>Stiletto TI14MS</b> - 14 oz. Titanium Framing Hammer</h6>
+          <h6><b>Occidental Leather 5080DB</b> - Pro Framer Set with Double Outer Bag</h6>
+          <h6><b>Rockwell RK9034</b> - JawStand XP Work Support Stand</h6>
+          <div class="mb-3" id = "name_form">
+            <h6><b>Name</b></h6>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <p class="form-control">Kolbe</p>
+              </div>
+              <div class="col-md-6 mb-3">
+                <p class="form-control">Face</p>
+              </div>
+            </div>
+          </div>
 
-        <div class="mb-9" id="autocomplete-container">
-          <h6><b>Address</b></h6>
+          <div class="mb-9" id="autocomplete-container">
+            <h6><b>Address</b></h6>
+          </div>
 
+          <div >
+            <h6>Choose delivery method</h6>
+            <input type="radio" id="fedex" checked="checked">
+            <label>Fedex Priority Overnight - $136.99</label>
+          </div>
+          <div>
+            <input type="radio"  id="fedex2">
+            <label>Fedex Ground - $58.99</label>
+          </div>
+          <div>
+            <input type="radio" id="gls">
+            <label>GLS - $0.99</label>
+          </div>
+          <hr class="mb-4">
         </div>
+      </div>
 
-        <div >
-          <h6>Choose delivery method</h6>
-          <input type="radio" id="fedex" checked="checked">
-          <label>Fedex Priority Overnight - $136.99</label>
-        </div>
-        <div>
-          <input type="radio"  id="fedex2">
-          <label>Fedex Ground - $58.99</label>
-        </div>
-        <div>
-          <input type="radio" id="gls">
-          <label>GLS we save you money by taking advantage of our employees! - $0.99</label>
-        </div>
-        <hr class="mb-4">
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017-2023 Company Name</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
     </div>
-  </div>
-
-  <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; 2017-2019 Company Name</p>
-    <ul class="list-inline">
-      <li class="list-inline-item"><a href="#">Privacy</a></li>
-      <li class="list-inline-item"><a href="#">Terms</a></li>
-      <li class="list-inline-item"><a href="#">Support</a></li>
-    </ul>
-  </footer>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-<script type = "text/javascript" src="/static/autocomplete.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <script type = "text/javascript" src="/static/autocomplete.js"></script>
+  </body>
 </html>
