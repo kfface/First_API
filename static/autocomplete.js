@@ -218,6 +218,17 @@ function addressAutocomplete(containerElement, callback, options) {
 
 var addressForSearch = "";
 var mapIsAdded = false;
+$('#exampleModal').on('shown.bs.modal', (function() {
+  var mapIsAdded = false;
+
+  return function() {
+    if (!mapIsAdded) {
+      $('.modal-body').html('<iframe id="geoIframe" src= "" width="100%" height="400" frameborder="0" style="border:0"></iframe>');
+      document.getElementById("geoIframe").setAttribute("src", addressForSearch);
+      mapIsAdded = true;
+    }    
+  };
+})());
 addressAutocomplete(document.getElementById("autocomplete-container", "bias=countrycode:us"), (data) => {
   console.log("Selected option: ");
   console.log(data);
@@ -238,14 +249,3 @@ addressAutocomplete(document.getElementById("autocomplete-container", "bias=coun
   placeholder: "Enter your US address here"
 });
 
-$('#exampleModal').on('shown.bs.modal', (function() {
-  var mapIsAdded = false;
-
-  return function() {
-    if (!mapIsAdded) {
-      $('.modal-body').html('<iframe id="geoIframe" src= "" width="100%" height="400" frameborder="0" style="border:0"></iframe>');
-      document.getElementById("geoIframe").setAttribute("src", addressForSearch);
-      mapIsAdded = true;
-    }    
-  };
-})());
