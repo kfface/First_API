@@ -67,16 +67,11 @@
             <form class="mb-3">
             <div class="input-group">
               <h4><b>Order total: $127.43</b></h4>
+              <button type="button" class="btn btn-secondary" id="open-modal-btn" data-toggle="modal" data-target="#exampleModal" disabled style="margin-left: 200px;">
+                Place Order
+              </button>
             </div>
             <div>
-              <form method="POST">
-                <button type="submit" class="btn btn-secondary" id="submit_button" style="margin-left: 200px;" >Place Order</button>
-              
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" id="open-modal-btn" data-toggle="modal" data-target="#exampleModal">
-                Launch demo modal
-              </button>
-
               <!-- Modal -->
               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -106,7 +101,6 @@
 	  	      <p class="form-control" id="state">state</p>
 	  	      <p class="form-control" id="postcode">postal code</p>
 
-            </form>
 	        </div>
 
 

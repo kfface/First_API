@@ -1,3 +1,5 @@
+
+/*address autocomplete api by https://www.geoapify.com/ */
 function addressAutocomplete(containerElement, callback, options) {
 
     const MIN_ADDRESS_LENGTH = 3;
@@ -229,6 +231,8 @@ $('#exampleModal').on('shown.bs.modal', (function() {
     }    
   };
 })());
+
+// Calling the address autocomplete function 
 addressAutocomplete(document.getElementById("autocomplete-container", "bias=countrycode:us"), (data) => {
   console.log("Selected option: ");
   console.log(data);
@@ -236,7 +240,7 @@ addressAutocomplete(document.getElementById("autocomplete-container", "bias=coun
   document.getElementById("city").innerHTML = data.city
   document.getElementById("state").innerHTML = data.state
   document.getElementById("postcode").innerHTML = data.postcode
-  document.getElementById('submit_button').removeAttribute('disabled')
+  document.getElementById('open-modal-btn').removeAttribute('disabled')
   addressForSearch = data.address_line1 + ", " + data.address_line2
   addressForSearch = addressForSearch.replace(/ /gi, "+")
   googlePrefix = "https://www.google.com/maps/embed/v1/place?key=AIzaSyD9LcGrN1dcRUdkvtzS1NcnMNSvSRtmjy0&q="
